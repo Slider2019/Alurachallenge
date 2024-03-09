@@ -134,13 +134,14 @@ body{
     font-size: 32px;
     font-family: Inter, Helvetica;
     color: var(--dark-blue400);
+    line-height: 24px;
 }
 
 .container .texto{
     position: relative;
     align-self: stretch;
     margin-top: -1px;
-    font-family: "Inter", Helvetica;
+    font-family: Inter, Helvetica;
     font-weight: 700;
     color: var(--gray500);
     font-size: 24px;
@@ -159,6 +160,37 @@ body{
     text-align: center;
     letter-spacing: 0;
     line-height: 24px;
+    border: none;
+}
+
+.botoncopiar{
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    width: 328px;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 24px;
+    position: relative;
+    background-color: transparent;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue300);
+}
+
+.container .botoncopiar{
+    font-family: Inter, Helvetica;
+    color: var(--dark-blue300);
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+}
+
+.marco4{
+    display: flex;
+    width: 680px;
+    position: absolute;
+    top: 265px;
+    left: 5px;
 }
 
 .container .texto2{
@@ -261,7 +293,7 @@ body{
     width: fit-content;
     margin-top: -1px;
     opacity: 0.8;
-    font-family: "Inter", Helvetica;
+    font-family: Inter, Helvetica;
     font-weight: 400;
     color: var(--gray400);
     font-size: 12px;
