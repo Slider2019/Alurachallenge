@@ -137,7 +137,7 @@ body{
     line-height: 24px;
 }
 
-.container .texto{
+.container #texto{
     position: relative;
     align-self: stretch;
     margin-top: -1px;
@@ -150,7 +150,7 @@ body{
     line-height: 28.8px;
 }
 
-.container .texto1{
+.container #texto1{
     position: relative;
     align-self: stretch;
     font-family: Inter, Helvetica;
@@ -165,12 +165,12 @@ body{
     height: 100px;
 }
 
-.texto1::placeholder{
+#texto1::placeholder{
     overflow-y: hidden;
     white-space: normal;
 }
 
-.botoncopiar{
+#botoncopiar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -184,7 +184,7 @@ body{
     border: 1px solid var(--dark-blue300);
 }
 
-.container .botoncopiar{
+.container #botoncopiar{
     font-family: Inter, Helvetica;
     color: var(--dark-blue300);
     font-size: 16px;

@@ -15,10 +15,10 @@
             <div class="panelderecho">
                 <img class="jovenconlupa" src="./assets/mu-eco.png" />
                 <div class="marco">
-                    <div class="texto">Ningún mensaje fue encontrado</div>
-                    <input class="texto1" type="text" placeholder="Ingresa el mensaje que deseas encriptar o desencriptar">
+                    <div id="texto">Ningún mensaje fue encontrado</div>
+                    <input id="texto1" type="text" placeholder="Ingresa el mensaje que deseas encriptar o desencriptar">
                     <div class="marco4">
-                        <button class="botoncopiar">Copiar</button>
+                        <button id="botoncopiar">Copiar</button>
                     </div>
                 </div>
             </div>
@@ -37,6 +37,19 @@
             </div>
             <img class="logoalura" src="./assets/logo.png" alt="logo alura">
         </div>
-    </div>    
+    </div>
+    <script>
+        document.getElementById('texto1').addEventListener('input', function() {
+            var boton = document.getElementById('botoncopiar');
+            var mensaje = document.getElementById('texto');
+            if (this.value.length > 0) {
+                boton.style.display = 'block';
+                mensaje.style.display = 'none';
+            } else {
+                boton.style.display = 'none';
+                mensaje.style.display = 'block'; 
+            }
+        });
+    </script>
 </body>
 </html>
