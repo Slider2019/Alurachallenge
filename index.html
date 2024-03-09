@@ -56,6 +56,13 @@
                 campoTexto.style.transform = 'translateY(0)';
             }
         });
+
+        document.getElementById('botoncopiar').addEventListener('click', function() {
+            var campoTexto = document.getElementById('texto1'); //texto1 es el campo de texto
+            campoTexto.select(); // Selecciona el contenido del campo de texto
+            document.execCommand('copy'); // Copia el contenido al portapapeles
+            alert('¡Contenido copiado al portapapeles!');//alerta de contenido copiado
+        });
     </script>
 </body>
 </html>
