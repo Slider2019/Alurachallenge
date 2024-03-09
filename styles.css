@@ -150,8 +150,8 @@ body{
     line-height: 28.8px;
 }
 
-.container #texto1{
-    position: relative;
+.marco #texto1{
+    
     align-self: stretch;
     font-family: Inter, Helvetica;
     font-weight: 400;
@@ -162,11 +162,11 @@ body{
     border: none;
     background-color: transparent;
     outline: none;
-    height: 100px;
+    
 }
 
 #texto1::placeholder{
-    overflow-y: hidden;
+    overflow-y: auto;
     white-space: normal;
 }
 
