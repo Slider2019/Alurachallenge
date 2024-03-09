@@ -42,12 +42,18 @@
         document.getElementById('texto1').addEventListener('input', function() {
             var boton = document.getElementById('botoncopiar');
             var mensaje = document.getElementById('texto');
+            var imagen = document.querySelector('.jovenconlupa');
+            var campoTexto = document.getElementById('texto1');
             if (this.value.length > 0) {
                 boton.style.display = 'block';
                 mensaje.style.display = 'none';
+                imagen.style.display = 'none';
+                campoTexto.style.transform = 'translateY(-600px)';
             } else {
                 boton.style.display = 'none';
                 mensaje.style.display = 'block';
+                imagen.style.display = 'block';
+                campoTexto.style.transform = 'translateY(0)';
             }
         });
     </script>
