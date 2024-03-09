@@ -39,30 +39,15 @@
         </div>
     </div>
     <script>
-        // Oculta el botón de copiar inicialmente
-        document.getElementById('botoncopiar').style.display = 'none';
-
         document.getElementById('texto1').addEventListener('input', function() {
             var boton = document.getElementById('botoncopiar');
-            var mensaje = document.getElementById('texto1');
+            var mensaje = document.getElementById('texto');
             if (this.value.length > 0) {
-                // Si hay texto en el campo, crea el botón de copiar si aún no existe
-                if (!boton) {
-                    boton = document.createElement('button');
-                    boton.id = 'botoncopiar';
-                    boton.textContent = 'Copiar';
-                    boton.addEventListener('click', function() {
-                        // Aquí puedes agregar la lógica para copiar el texto del campo
-                    });
-                    document.body.appendChild(boton);
-                }
-                mensaje.style.display = 'none'; // Oculta el mensaje si el campo de texto tiene contenido
+                boton.style.display = 'block';
+                mensaje.style.display = 'none';
             } else {
-                // Si el campo está vacío, elimina el botón de copiar si existe
-                if (boton) {
-                    boton.parentNode.removeChild(boton);
-                }
-                mensaje.style.display = 'block'; // Muestra el mensaje si el campo de texto está vacío
+                boton.style.display = 'none';
+                mensaje.style.display = 'block';
             }
         });
     </script>
