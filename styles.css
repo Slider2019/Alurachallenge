@@ -157,10 +157,17 @@ body{
     font-weight: 400;
     color: var(--gray400);
     font-size: 16px;
-    text-align: center;
     letter-spacing: 0;
     line-height: 24px;
     border: none;
+    background-color: transparent;
+    outline: none;
+    height: 100px;
+}
+
+.texto1::placeholder{
+    overflow-y: hidden;
+    white-space: normal;
 }
 
 .botoncopiar{
