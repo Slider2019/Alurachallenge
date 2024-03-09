@@ -182,7 +182,7 @@ body{
     left: 240px;
 }
   
-.container .boton{
+.marco2 .botonencriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -195,22 +195,15 @@ body{
     border-radius: 24px;
 }
   
-.container .boton2{
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    flex: 1;
-    margin-top: -1px;
-    font-family: "Inter", Helvetica;
-    font-weight: 400;
+.container .botonencriptar{
+    font-family: Inter, Helvetica;
     color: white;
     font-size: 16px;
     text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
+    justify-content: center;
 }
   
-.container .botonenvolv{
+.container .botondesencriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -221,8 +214,15 @@ body{
     position: relative;
     background-color: #d8dfe8;
     border-radius: 24px;
-    border: 1px solid;
-    border-color: var(--dark-blue300);
+    border: 1px solid var(--dark-blue300);
+}
+
+.container .botondesencriptar{
+    font-family: Inter, Helvetica;
+    color: var(--dark-blue300);
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
 }
   
 .container .boton3{
@@ -249,13 +249,14 @@ body{
     left: 240px;
 }
   
-.container .bi-exclamation{
+.marco3 .bi-exclamation-circle-fill{
     position: relative;
     width: 16px;
     height: 16px;
+    color: var(--gray400);
 }
   
-.container .texto2{
+.container .texto3{
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -269,7 +270,7 @@ body{
     white-space: nowrap;
 }
   
-.container .logo{
+.container .logoalura{
     position: absolute;
     width: 120px;
     height: 48px;
