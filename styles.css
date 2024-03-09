@@ -194,8 +194,8 @@ body{
 
 .marco4{
     display: flex;
-    width: 680px;
     position: absolute;
+    align-items: flex-start;
     top: 265px;
     left: 5px;
 }
