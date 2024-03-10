@@ -83,13 +83,13 @@ body{
     background-color: var(--light-blue100);
 }
 
-.container .marcocentral{
+.container .marcoCentral{
     width: 1440px;
     height: 1024px;
     position: relative;
 }
 
-.container .panelderecho{
+.container .panelDerecho{
     position: absolute;
     width: 400px;
     height: 944px;
@@ -100,7 +100,7 @@ body{
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.container .jovenconlupa{
+.container .jovenConLupa{
     position: absolute;
     width: 336px;
     height: 304px;
@@ -125,16 +125,28 @@ body{
     font-size: 32px;
 }
 
-.cuadrotexto{
-    height: 48px;
-    width: 577px;
+.cuadroTexto{
     border: none;
     background-color: transparent;
     outline: none;
-    font-size: 32px;
+    color: var(--dark-blue300);
+    line-height: 150%;
+    text-align: left;
+    resize: none;
+    align-self: stretch;
+    overflow-y: clip;
+    position: absolute;
+    width: 680px;
+    height: 288px;
+    top: 168px;
+    left: 240px;
     font-family: Inter, Helvetica;
-    color: var(--dark-blue400);
-    line-height: 24px;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.cuadroTexto::placeholder{
+    color: var(--dark-blue300);
 }
 
 .container #texto{
@@ -161,6 +173,7 @@ body{
     overflow-y: clip;
     resize: none;
     height: 165px;
+    text-align: left;
 }
 
 #texto1::placeholder{
@@ -168,7 +181,7 @@ body{
     white-space: normal;
 }
 
-#botoncopiar{
+#botonCopiar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -184,15 +197,15 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#botoncopiar:hover{
+#botonCopiar:hover{
     background-color: var(--gray100);
 }
 
-#botoncopiar:active{
+#botonCopiar:active{
     background-color: var(--gray300);
 }
 
-.container #botoncopiar{
+.container #botonCopiar{
     font-family: Inter, Helvetica;
     color: var(--dark-blue300);
     font-size: 16px;
@@ -207,17 +220,6 @@ body{
     top: 265px;
     left: 5px;
 }
-
-.container .texto2{
-    position: absolute;
-    width: 577px;
-    top: 168px;
-    left: 240px;
-    font-family: Inter, Helvetica;
-    font-weight: 400;
-    color: var(--dark-blue400);
-    font-size: 32px;
-}
   
 .container .marco2{
     display: flex;
@@ -229,7 +231,7 @@ body{
     left: 240px;
 }
   
-.marco2 .botonencriptar{
+.marco2 .botonEncriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -244,15 +246,15 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.botonencriptar:hover{
+.botonEncriptar:hover{
     background-color: var(--dark-blue500);
 }
 
-.botonencriptar:active{
+.botonEncriptar:active{
     background-color: var(--dark-blue100);
 }
   
-.container .botonencriptar{
+.container .botonEncriptar{
     font-family: Inter, Helvetica;
     color: white;
     font-size: 16px;
@@ -260,7 +262,7 @@ body{
     justify-content: center;
 }
   
-.container .botondesencriptar{
+.container .botonDesencriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -276,15 +278,19 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.botondesencriptar:hover{
+.botonDesencriptar:hover{
     background-color: var(--light-blue400);
 }
 
-.botondesencriptar:active{
+.botonDesencriptar:active{
     background-color: var(--light-blue500);
 }
 
-.container .botondesencriptar{
+.botonDesencriptar.desactivado{
+    background-color: transparent;
+}
+
+.container .botonDesencriptar{
     font-family: Inter, Helvetica;
     color: var(--dark-blue300);
     font-size: 16px;
@@ -337,7 +343,7 @@ body{
     white-space: nowrap;
 }
   
-.container .logoalura{
+.container .logoAlura{
     position: absolute;
     width: 120px;
     height: 48px;
