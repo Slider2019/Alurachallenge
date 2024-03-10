@@ -151,18 +151,16 @@ body{
 }
 
 .marco #texto1{
-    
     align-self: stretch;
     font-family: Inter, Helvetica;
-    font-weight: 400;
     color: var(--gray400);
     font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
     border: none;
     background-color: transparent;
     outline: none;
-    
+    overflow-y: clip;
+    resize: none;
+    height: 165px;
 }
 
 #texto1::placeholder{
