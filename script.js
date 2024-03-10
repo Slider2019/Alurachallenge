@@ -39,8 +39,8 @@ function ajustarAlturaTextarea(textarea) {
 }
 
 // Obtener elementos del DOM
-const textareaEncriptar = document.getElementById('texto1');//.texto1
-const inputTexto = document.getElementById('cuadroTexto');//.cuadroTexto
+const textareaEncriptar = document.getElementById('texto1');
+const inputTexto = document.getElementById('cuadroTexto');
 const botonEncriptar = document.getElementById('botonEncriptar');
 const botonDesencriptar = document.getElementById('botonDesencriptar');
 
@@ -57,19 +57,35 @@ inputTexto.addEventListener('input', function() {
     }
 });
 
-// Borrar texto del textarea al hacer clic en el botón "Encriptar"
+// Función para encriptar texto estilo César
+function encriptarTexto(texto, desplazamiento) {
+    return texto.replace(/[a-zA-Z]/g, function(letra) {
+        var codigo = letra.charCodeAt(0);
+        var mayuscula = letra === letra.toUpperCase();
+        var limite = mayuscula ? 65 : 97;
+        return String.fromCharCode((codigo - limite + desplazamiento) % 26 + limite);
+    });
+}
+
+// Función para desencriptar texto estilo César
+function desencriptarTexto(texto, desplazamiento) {
+    return encriptarTexto(texto, 26 - desplazamiento);
+}
+
+// Event listener para encriptar texto
 botonEncriptar.addEventListener('click', function() {
-    textareaEncriptar.value = '';
+    var textoAEncriptar = textareaEncriptar.value;
+    var desplazamiento = 3; // Valor de desplazamiento predeterminado
+    var textoEncriptado = encriptarTexto(textoAEncriptar, desplazamiento);
+    inputTexto.value = textoEncriptado;
+    textareaEncriptar.value = ''; // Borrar el texto después de encriptarlo
 });
 
-// Función para encriptar texto (por implementar)
-function encriptarTexto(texto) {
-    // Aquí puedes agregar la lógica para encriptar el texto
-    return texto;
-}
-
-// Función para desencriptar texto (por implementar)
-function desencriptarTexto(texto) {
-    // Aquí puedes agregar la lógica para desencriptar el texto
-    return texto;
-}
+// Event listener para desencriptar texto
+botonDesencriptar.addEventListener('click', function() {
+    var textoADesencriptar = inputTexto.value;
+    var desplazamiento = 3; // Valor de desplazamiento predeterminado
+    var textoDesencriptado = desencriptarTexto(textoADesencriptar, desplazamiento);
+    inputTexto.value = textoDesencriptado;
+    textareaEncriptar.value = ''; // Borrar el texto después de desencriptarlo
+});

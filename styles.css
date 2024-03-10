@@ -125,7 +125,7 @@ body{
     font-size: 32px;
 }
 
-.cuadroTexto{
+#cuadroTexto{
     border: none;
     background-color: transparent;
     outline: none;
@@ -145,7 +145,7 @@ body{
     font-size: 32px;
 }
 
-.cuadroTexto::placeholder{
+#cuadroTexto::placeholder{
     color: var(--dark-blue300);
 }
 
@@ -231,7 +231,7 @@ body{
     left: 240px;
 }
   
-.marco2 .botonEncriptar{
+.marco2 #botonEncriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -246,15 +246,15 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.botonEncriptar:hover{
+#botonEncriptar:hover{
     background-color: var(--dark-blue500);
 }
 
-.botonEncriptar:active{
+#botonEncriptar:active{
     background-color: var(--dark-blue100);
 }
   
-.container .botonEncriptar{
+.container #botonEncriptar{
     font-family: Inter, Helvetica;
     color: white;
     font-size: 16px;
@@ -262,7 +262,7 @@ body{
     justify-content: center;
 }
   
-.container .botonDesencriptar{
+.container #botonDesencriptar{
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -278,19 +278,19 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.botonDesencriptar:hover{
+#botonDesencriptar:hover{
     background-color: var(--light-blue400);
 }
 
-.botonDesencriptar:active{
+#botonDesencriptar:active{
     background-color: var(--light-blue500);
 }
 
-.botonDesencriptar.desactivado{
+#botonDesencriptar.desactivado{
     background-color: transparent;
 }
 
-.container .botonDesencriptar{
+.container #botonDesencriptar{
     font-family: Inter, Helvetica;
     color: var(--dark-blue300);
     font-size: 16px;
